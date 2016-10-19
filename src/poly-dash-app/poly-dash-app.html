@@ -29,7 +29,7 @@
 
       <!--Goes through all of the items in the api-->
         <template is="dom-repeat" items="[[apiResponse]]">
-          <poly-dash-card title="[[item.title]]" description="[[item.description]]" link-href="[[item.linkHref]]"></poly-dash-card>
+          <poly-dash-card title="[[item.title]]" description="[[item.description]]" link-href="[[item.linkHref]]" bg-image="[[item.bgImage]]"></poly-dash-card>
         </template>
     </div>
   </template>
@@ -51,25 +51,25 @@
               title:"My Super Cool Title",
               description:"yup. not a mock API at all...",
               linkHref:"#",
-              bgImage:"assets/bg.jpg"
+              bgImage:"assets/1.jpg"
             },
             {
               title:"Its Real",
               description:"3/11 is a lie",
               linkHref:"http://google.ca",
-              bgImage:"assets/bg.jpg"
+              bgImage:"assets/2.jpg"
             },
             {
               title:"Im on a plane",
               description:"cat.jpg - why is this not loading",
               linkHref:"http://google.co.uk",
-              bgImage:"assets/bg.jpg"
+              bgImage:"assets/3.jpg"
             },
             {
               title:"Location: SwagCity",
               description:"Population 420yolo",
               linkHref:"http://gmail.com",
-              bgImage:"assets/bg.jpg"
+              bgImage:"assets/4.jpg"
             }
           ]
         }

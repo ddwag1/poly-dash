@@ -24,7 +24,7 @@ Its a card.
           width: inherit;
           color: #111;
 
-          background-image:url('/assets/bg.jpg');
+          background: var(--background-image-url);
           background-size:cover;
         }
       }
@@ -71,9 +71,9 @@ Its a card.
     },
 
     onCardInit: function(title, description, linkHref, bgImage){
-
+      this.customStyle['--background-image-url'] = "url(" + bgImage + ")";
       console.log(title +' ||| '+ description +' ||| ' +' ||| '+ linkHref + ' ||| '+ bgImage);
-    },
+    }
 
     });
   </script>

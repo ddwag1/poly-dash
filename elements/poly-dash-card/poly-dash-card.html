@@ -16,19 +16,31 @@ Its a card.
         display: inline-block;
         margin: 20px;
         height: 400px;
-          width: 400px;
+        width: 400px;
+        -webkit-user-select: none;
 
         --paper-card: {
           height: inherit;
           width: inherit;
+          color: #111;
+          font-family: Sans-serif;
         }
       }
+
+      a {
+          height: inherit;
+          width: inherit;
+          display: block;
+        }
     </style>
-    <paper-card>
-      <paper-ripple></paper-ripple>
-      <content></content>
-    </paper-card>
-    
+    <a href="[[linkHref]]">
+      <paper-card>
+        <paper-ripple></paper-ripple>
+        <h2>[[title]]</h2>
+
+        <span>[[description]]</span>
+      </paper-card>
+    </a>
   </template>
 
   <script>
@@ -36,16 +48,26 @@ Its a card.
 
       is: 'poly-dash-card',
 
-      properties: {
-        prop1: {
-          type: String,
-          value: 'poly-dash-card',
-        },
+    observers: [
+      'onCardInit(title, description, linkHref)'
+    ],
 
-        init: function(){
-          console.log('yo dawg')
-        }
+    properties: {
+      title: {
+        type: String
       },
+      description: {
+        type: String
+      },
+      linkHref: {
+        type: String
+      }
+    },
+
+    onCardInit: function(title, description, linkHref){
+
+      console.log(title +' ||| '+ description +' ||| ' +' ||| '+ linkHref);
+    },
 
     });
   </script>

@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../../elements/poly-dash-card/poly-dash-card.html">
 
 
@@ -20,11 +21,14 @@
       }
     </style>
 
+    <!--<iron-ajax></iron-ajax>-->
+
     <h1 class="welcome-message">Your Dashboard</h1>
 
     <div class="card-container">      
-      <poly-dash-card title="app1" description="this goes somewhere cool dawg" link-text="Follow the link" link-href="http://www.google.com">
-      </poly-dash-card>
+      <dom-repeat items="[[apiResponse]]">
+        <poly-dash-card title="[[item.title]]" description="[[item.description]]" link-href="[[item.linkHref]]"></poly-dash-card>
+      </dom-repeat>
     </div>
   </template>
 
@@ -38,6 +42,31 @@
           type: String,
           value: 'poly-dash-app',
         },
+        apiResponse: {
+          type: Array,
+          value: [
+            {
+              title:"My Super Cool Title On A Totally Real API",
+              description:"yup. not a mock API at all...",
+              linkHref:"http://instagram.com/dylanbyth"
+            },
+            {
+              title:"Its Real",
+              description:"3/11 is a lie",
+              linkHref:"http://google.ca"
+            },
+            {
+              title:"Im on a plane",
+              description:"cat.jpg - why is this not loading",
+              linkHref:"http://google.co.uk"
+            },
+            {
+              title:"Location: SwagCity",
+              description:"Population 420yolo",
+              linkHref:"http://gmail.com"
+            }
+          ]
+        }
       },
 
     });

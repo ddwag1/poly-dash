@@ -1,0 +1,7 @@
+{
+  "name": "poly-dash",
+  "short_name": "poly-dash",
+  "description": "A simple dashboard made with Polymer",
+  "start_url": "/",
+  "display": "standalone"
+}

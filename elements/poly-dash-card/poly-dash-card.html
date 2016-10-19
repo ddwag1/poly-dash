@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
 
 <!--
 `poly-dash-card`
@@ -23,7 +24,10 @@ Its a card.
         }
       }
     </style>
-    <paper-card><content></content></paper-card>
+    <paper-card>
+      <paper-ripple></paper-ripple>
+      <content></content>
+    </paper-card>
     
   </template>
 

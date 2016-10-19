@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<!--
+`poly-dash-card`
+Its a card.
+
+@demo demo/index.html 
+-->
+
+<dom-module id="poly-dash-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background: red;
+        height: 300px;
+        width: 300px;
+      }
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'poly-dash-card',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'poly-dash-card',
+        },
+
+        init: function(){
+          console.log('yo dawg')
+        }
+      },
+
+    });
+  </script>
+</dom-module>

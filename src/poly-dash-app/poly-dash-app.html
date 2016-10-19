@@ -26,9 +26,9 @@
     <h1 class="welcome-message">Your Dashboard</h1>
 
     <div class="card-container">      
-      <dom-repeat items="[[apiResponse]]">
+        <template is="dom-repeat" items="[[apiResponse]]">
         <poly-dash-card title="[[item.title]]" description="[[item.description]]" link-href="[[item.linkHref]]"></poly-dash-card>
-      </dom-repeat>
+        </template>
     </div>
   </template>
 
@@ -46,7 +46,7 @@
           type: Array,
           value: [
             {
-              title:"My Super Cool Title On A Totally Real API",
+              title:"My Super Cool Title",
               description:"yup. not a mock API at all...",
               linkHref:"http://instagram.com/dylanbyth"
             },

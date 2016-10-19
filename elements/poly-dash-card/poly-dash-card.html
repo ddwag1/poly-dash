@@ -23,6 +23,9 @@ Its a card.
           height: inherit;
           width: inherit;
           color: #111;
+
+          background-image:url('/assets/bg.jpg');
+          background-size:cover;
         }
       }
 
@@ -35,7 +38,7 @@ Its a card.
     <a href="[[linkHref]]" target="blank">
       <paper-card>
         <paper-ripple></paper-ripple>
-        
+
         <h2>[[title]]</h2>
 
         <span>[[description]]</span>
@@ -49,7 +52,7 @@ Its a card.
       is: 'poly-dash-card',
 
     observers: [
-      'onCardInit(title, description, linkHref)'
+      'onCardInit(title, description, linkHref, bgImage)'
     ],
 
     properties: {
@@ -61,12 +64,15 @@ Its a card.
       },
       linkHref: {
         type: String
+      },
+      bgImage: {
+        type: String
       }
     },
 
-    onCardInit: function(title, description, linkHref){
+    onCardInit: function(title, description, linkHref, bgImage){
 
-      console.log(title +' ||| '+ description +' ||| ' +' ||| '+ linkHref);
+      console.log(title +' ||| '+ description +' ||| ' +' ||| '+ linkHref + ' ||| '+ bgImage);
     },
 
     });

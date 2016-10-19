@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
 
 <!--
 `poly-dash-card`
@@ -11,13 +12,19 @@ Its a card.
   <template>
     <style>
       :host {
-        display: block;
-        background: red;
-        height: 300px;
-        width: 300px;
+        display: inline-block;
+        margin: 20px;
+        height: 400px;
+          width: 400px;
+
+        --paper-card: {
+          height: inherit;
+          width: inherit;
+        }
       }
     </style>
-    <content></content>
+    <paper-card><content></content></paper-card>
+    
   </template>
 
   <script>

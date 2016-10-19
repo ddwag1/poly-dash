@@ -26,8 +26,10 @@
     <h1 class="welcome-message">Your Dashboard</h1>
 
     <div class="card-container">      
+
+      <!--Goes through all of the items in the api-->
         <template is="dom-repeat" items="[[apiResponse]]">
-        <poly-dash-card title="[[item.title]]" description="[[item.description]]" link-href="[[item.linkHref]]"></poly-dash-card>
+          <poly-dash-card title="[[item.title]]" description="[[item.description]]" link-href="[[item.linkHref]]"></poly-dash-card>
         </template>
     </div>
   </template>

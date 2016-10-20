@@ -2,6 +2,8 @@
 
 A simple dashboard made with Polymer.
 
+View demo at [poly-dash-firebase.firebaseapp.com](poly-dash-firebase.firebaseapp.com).
+
 ## Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.

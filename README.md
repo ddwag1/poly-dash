@@ -2,7 +2,7 @@
 
 A simple dashboard made with Polymer.
 
-View demo at [poly-dash-firebase.firebaseapp.com](poly-dash-firebase.firebaseapp.com).
+View demo at [poly-dash-firebase.firebaseapp.com](https://poly-dash-firebase.firebaseapp.com).
 
 ## Install the Polymer-CLI
 

@@ -1,6 +1,6 @@
 # \<poly-dash\>
 
-A simple dashboard made with Polymer
+A simple dashboard made with Polymer.
 
 ## Install the Polymer-CLI
 

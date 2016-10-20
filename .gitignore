@@ -1,6 +1,6 @@
  
 Polymer ###
 #Installed components via bower
-bower_components/
+public/bower_components/
 build/
 .firebase

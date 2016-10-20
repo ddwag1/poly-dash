@@ -1,15 +1,10 @@
-<link rel="import" href="../../bower_components/polymer/polymer.html">
+<html><head><link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
 
-<!--
-`poly-dash-card`
-Its a card.
 
-@demo demo/index.html 
--->
 
-<dom-module id="poly-dash-card">
+</head><body><dom-module id="poly-dash-card">
   <template>
     <style>
       :host {
@@ -35,7 +30,7 @@ Its a card.
           display: block;
         }
     </style>
-    <a href="[[linkHref]]">
+    <a href="[[linkHref]]" target="blank">
       <paper-card>
         <paper-ripple></paper-ripple>
 
@@ -46,35 +41,6 @@ Its a card.
     </a>
   </template>
 
-  <script>
-    Polymer({
-
-      is: 'poly-dash-card',
-
-    observers: [
-      'onCardInit(title, description, linkHref, bgImage)'
-    ],
-
-    properties: {
-      title: {
-        type: String
-      },
-      description: {
-        type: String
-      },
-      linkHref: {
-        type: String
-      },
-      bgImage: {
-        type: String
-      }
-    },
-
-    onCardInit: function(title, description, linkHref, bgImage){
-      this.customStyle['--background-image-url'] = "url(" + bgImage + ")";
-      console.log(title +' ||| '+ description +' ||| ' +' ||| '+ linkHref + ' ||| '+ bgImage);
-    }
-
-    });
-  </script>
+  <script>Polymer({is:"poly-dash-card",observers:["onCardInit(title, description, linkHref, bgImage)"],properties:{title:{type:String},description:{type:String},linkHref:{type:String},bgImage:{type:String}},onCardInit:function(t,e,i,r){this.customStyle["--background-image-url"]="url("+r+")",console.log(t+" ||| "+e+" |||  ||| "+i+" ||| "+r)}});</script>
 </dom-module>
+</body></html>
